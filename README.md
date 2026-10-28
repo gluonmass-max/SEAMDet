@@ -6,13 +6,7 @@ This repository contains the implementation of SEAMDet, an oriented object detec
 
 ## Overview
 
-SEAMDet extends a single-backbone early-fusion detector. The optical (RGB) and SAR images are stacked into one 4-channel input, and a SAR-domain expert is attached to the backbone. The model has three components:
-
-| Component    | Description                                                  |
-| ------------ | ------------------------------------------------------------ |
-| **LSK-EF**   | A large-selective-kernel backbone (LSKNet-S) that takes the 4-channel optical + SAR input (early fusion). |
-| **SESF**     | SAR-Expert Stitched Fusion. It has three parts:<br>• **SES**: a SAR expert stream that runs in lockstep with the host backbone.<br>• **BSA**: zero-initialised bidirectional low-rank stitch adapters between the expert stream and the host.<br>• **SDI**: initialisation of the expert from a SAR-only detector. |
-| **CCR-Head** | Its two parts are **MAC**, multi-scale anchor coverage in the RPN, and **RCR**, a two-stage rotated cascade refinement head. |
+SEAMDet extends a single-backbone early-fusion detector. The optical (RGB) and SAR images are stacked into one 4-channel input, and a SAR-domain expert is attached to the backbone. 
 
 ## Requirements
 
